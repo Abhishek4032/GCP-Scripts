@@ -1,0 +1,55 @@
+# Copy and Run on GCP Shell
+
+gcloud config set project forseti-255918
+gcloud compute instances list --format="value (name,INTERNAL_IP,MACHINE_TYPE,status,zone,creation_timestamp,labels)" > KD-FORSETI-01.txt
+cloudshell download KD-FORSETI-01.txt 
+gcloud config set project kd-hstntw-01
+gcloud compute instances list --format="value (name,INTERNAL_IP,MACHINE_TYPE,status,zone,creation_timestamp,labels)" > KD-HSTNTW-01.txt
+cloudshell download KD-HSTNTW-01.txt
+gcloud config set project kd-infrprd-01
+gcloud compute instances list --format="value (name,INTERNAL_IP,MACHINE_TYPE,status,zone,creation_timestamp,labels)" > KD-INFRPRD-01.txt
+cloudshell download KD-INFRPRD-01.txt
+gcloud config set project kd-infrtool-01  
+gcloud compute instances list --format="value (name,INTERNAL_IP,MACHINE_TYPE,status,zone,creation_timestamp,labels)" > KD-INFRTOOL-01.txt
+cloudshell download KD-INFRTOOL-01.txt
+gcloud config set project kd-nsapnprd-01 
+gcloud compute instances list --format="value (name,INTERNAL_IP,MACHINE_TYPE,status,zone,creation_timestamp,labels)" > KD-NSAPNPRD-01.txt
+cloudshell download KD-NSAPNPRD-01.txt
+gcloud config set project kd-nsapprd-01
+gcloud compute instances list --format="value (name,INTERNAL_IP,MACHINE_TYPE,status,zone,creation_timestamp,labels)" > KD-NSAPPRD-01.txt
+cloudshell download KD-NSAPPRD-01.txt
+gcloud config set project dsdpred-order-lab 
+gcloud compute instances list --format="value (name,INTERNAL_IP,MACHINE_TYPE,status,zone,creation_timestamp,labels)" > DSDPred-Order-Lab.txt
+cloudshell download DSDPred-Order-Lab.txt
+gcloud config set project dsdpred-order-nonprod 
+gcloud compute instances list --format="value (name,INTERNAL_IP,MACHINE_TYPE,status,zone,creation_timestamp,labels)" >DSDPred-Order-nonProd.txt
+cloudshell download DSDPred-Order-nonProd.txt
+gcloud config set project dsdpred-order-prod 
+gcloud compute instances list --format="value (name,INTERNAL_IP,MACHINE_TYPE,status,zone,creation_timestamp,labels,$PROJECT_ID)" > DSDPred-Order-Prod.txt
+cloudshell download DSDPred-Order-Prod.txt
+gcloud config set project dsd-sbe-nonprod 
+gcloud compute instances list --format="value (name,INTERNAL_IP,MACHINE_TYPE,status,zone,creation_timestamp,labels)" > DSD-SBE-NonProd.txt
+cloudshell download DSD-SBE-NonProd.txt
+gcloud config set project dsd-sbe-prod 
+gcloud compute instances list --format="value (name,INTERNAL_IP,MACHINE_TYPE,status,zone,creation_timestamp,labels)" > DSD-SBE-Prod.txt
+cloudshell download DSD-SBE-Prod.txt
+gcloud config set project kd-sapnprd-01 
+gcloud compute instances list --format="value (name,INTERNAL_IP,MACHINE_TYPE,status,zone,creation_timestamp,labels)" > KD-SAPNPRD-01.txt
+cloudshell download KD-SAPNPRD-01.txt
+gcloud config set project kd-sapprd-01
+gcloud compute instances list --format="value (name,INTERNAL_IP,MACHINE_TYPE,status,zone,creation_timestamp,labels)" > KD-SAPPRD-01.txt
+cloudshell download KD-SAPPRD-01.txt
+gcloud config set project test-poc-01 
+gcloud compute instances list --format="value (name,INTERNAL_IP,MACHINE_TYPE,status,zone,creation_timestamp,labels)" > test-poc-01.txt
+cloudshell download test-poc-01.txt
+
+# Follow the process to merge it quickly
+# Open Excel
+# Select DATA tab
+# Select New Query
+# Keep all the downloaded txt files in one folder, Select the Folder of GCP txt files using “From Folder”.
+# Click on Edit Button
+# Click on Content Icon
+# Click on Load
+# Close & Load the DATA
+# Now Data will be available on the Excel Sheet
